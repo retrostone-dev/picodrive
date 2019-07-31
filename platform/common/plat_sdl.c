@@ -54,12 +54,12 @@ const struct menu_keymap in_sdl_key_map[] __attribute__((weak)) =
 	{ SDLK_DOWN,	PBTN_DOWN },
 	{ SDLK_LEFT,	PBTN_LEFT },
 	{ SDLK_RIGHT,	PBTN_RIGHT },
-	{ SDLK_RETURN,	PBTN_MOK },
-	{ SDLK_ESCAPE,	PBTN_MBACK },
+	{ SDLK_LALT,	PBTN_MOK },
+	{ SDLK_LALT,	PBTN_MBACK },
 	{ SDLK_SEMICOLON,	PBTN_MA2 },
 	{ SDLK_QUOTE,	PBTN_MA3 },
-	{ SDLK_LEFTBRACKET,  PBTN_L },
-	{ SDLK_RIGHTBRACKET, PBTN_R },
+	{ SDLK_TAB,  PBTN_L },
+	{ SDLK_BACKSPACE, PBTN_R },
 };
 
 const struct menu_keymap in_sdl_joy_map[] __attribute__((weak)) =
@@ -263,9 +263,9 @@ void plat_init(void)
 
 	SDL_WM_SetCaption("PicoDrive " VERSION, NULL);
 
-	g_menuscreen_w = plat_sdl_screen->w;
-	g_menuscreen_h = plat_sdl_screen->h;
-	g_menuscreen_pp = g_menuscreen_w;
+	g_menuscreen_w = 320;
+	g_menuscreen_h = 240;
+	g_menuscreen_pp = 320;
 	g_menuscreen_ptr = NULL;
 
 	shadow_size = g_menuscreen_w * g_menuscreen_h * 2;
